@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6pfyhftgankp"]
+
+[ext_resource type="Texture2D" uid="uid://duj8c51etukl1" path="res://forestal/icon.svg" id="1_2yhtf"]
+[ext_resource type="Script" path="res://forestal/scripts/Fuego.gd" id="2_n6jft"]
+
+[node name="Sprite2D" type="Sprite2D"]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_2yhtf")
+script = ExtResource("2_n6jft")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
