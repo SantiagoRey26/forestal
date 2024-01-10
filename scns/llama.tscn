@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7yu0ufbh82h2"]
+
+[ext_resource type="Texture2D" uid="uid://25xvhbmxvusv" path="res://imgs/fuego-01.png" id="1_u7emv"]
+[ext_resource type="Script" path="res://forestal/scripts/llama.gd" id="2_hlfhj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvjtt"]
+atlas = ExtResource("1_u7emv")
+region = Rect2(0, 1, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqek0"]
+atlas = ExtResource("1_u7emv")
+region = Rect2(16, 1, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jlo3"]
+atlas = ExtResource("1_u7emv")
+region = Rect2(32, 1, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mc7o"]
+atlas = ExtResource("1_u7emv")
+region = Rect2(48, 1, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfqnk"]
+atlas = ExtResource("1_u7emv")
+region = Rect2(64, 1, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6pbbv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvjtt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqek0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jlo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mc7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfqnk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Llama" type="AnimatedSprite2D"]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_6pbbv")
+autoplay = "default"
+frame = 2
+frame_progress = 0.652427
+offset = Vector2(0, -10)
+script = ExtResource("2_hlfhj")
